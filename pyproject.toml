@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "resp-music"
+version = "1.0.0"
+authors = [
+    {name = "Oliver A Collins", email = "oliver7collins@outlook.com"}
+]
+description = "A human-computer interface (HCI) allowing one to create/modulate music using respiration signals"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "scipy",
+    "mido",
+    "python-rtmidi",
+    "pylsl",
+    "pyqt5",
+    "pyqtgraph",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Operating System :: Microsoft :: Windows :: Windows 11",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/OliverACollins/Respiration-Controlled-Music"
+Issues = "https://github.com/OliverACollins/Respiration-Controlled-Music/issues"
+
+[project.scripts]
+resp-music = "resp_music.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/resp_music"]
