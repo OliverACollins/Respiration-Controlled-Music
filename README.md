@@ -40,11 +40,11 @@ Prerecorded respiration signal (simulated using NeuroKit2, encoded into .csv fil
 - Ableton Live
 
 ## Roadmap
-[x] Live respiration -> MIDI conversion (for both "play" and "modulation")
-[x] Prerecorded respiration -> MIDI conversion (for both "play" and "modulation")
-[ ] For modulation scripts, add in Key mapping in addition to MIDI CC mapping (so that owning a MIDI controller is not required to run live-mod and prerec-mod)
-[ ] Code a cleaner end to MIDI output and data visualiser
-[ ] Add a wider variety of prerecorded respiration signals (e.g., different respiration rates, more complex signals)
+- [x] Live respiration -> MIDI conversion (for both "play" and "modulation")
+- [x] Prerecorded respiration -> MIDI conversion (for both "play" and "modulation")
+- [ ] For modulation scripts, add in Key mapping in addition to MIDI CC mapping (so that owning a MIDI controller is not required to run live-mod and prerec-mod)
+- [ ] Code a cleaner end to MIDI output and data visualiser
+- [ ] Add a wider variety of prerecorded respiration signals (e.g., different respiration rates, more complex signals)
 
 ## Dependencies
 Install the following dependencies:
