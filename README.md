@@ -8,10 +8,10 @@ The purpose of creating a respiration-music interface was to bring greater bodil
 This Python package enables users to (1) create/modulate music according to their live respiration signals and (2) create/modulate music using a prerecorded respiration simulation (courtesy of the [NeuroKit2](https://neuropsychology.github.io/NeuroKit/functions/rsp.html) package).
 
 This package consists of two scripts for each live and prerecorded respiration-controlled music:
-- "live-play": live respiration -> MIDI notes produced by Ableton (pitch of notes determined by RESP signal)
-- "live-mod": live respiration -> MIDI CC mapping (the modulation of a musical quality, determined by the user, e.g., chorus, overdrive, reverb)
-- "prerec-play": prerecorded respiration -> MIDI notes produced by Ableton
-- "prerec-mod": prerecorded respiration -> MIDI CC mapping
+- "**live-play**": live respiration -> MIDI notes produced by Ableton (pitch of notes determined by RESP signal)
+- "**live-mod**": live respiration -> MIDI CC mapping (the modulation of a musical quality, determined by the user, e.g., chorus, overdrive, reverb)
+- "**prerec-play**": prerecorded respiration -> MIDI notes produced by Ableton
+- "**prerec-mod**": prerecorded respiration -> MIDI CC mapping
 
 Each script has an initial calibration period to calculate one's respiration amplitude (V) range, to determine the scaling of MIDI notes to one's "respiratory capacity". The "live-" scripts have an active 30-second calibration period, where, prototypically, one would aim to perform maximal exhalation and inhalation during this window. The "prerec-" scripts have an indefinite calibration period, where Python examines the amplitude range over the prerecorded CSV data. After the calibration period, the scripts are hard-coded so that the scaling of MIDI notes is determined by the minimum and maximum respiration amplitude calculated during this initial window.
 
@@ -61,7 +61,7 @@ pip install https://github.com/OliverACollins/Respiration-Controlled-Music/zipba
 
 ## Usage
 ### Setting up loopMIDI port
-To facilitate signal-to-MIDI transmission between Python and Ableton, you must install loopMIDI to create a MIDI port. By default, the resp-music scripts are set to run from a port named "HCI 1", but this can be easy adapted through the `--midi-port "PORT_NAME"` CLI argument within the Python terminal.[*] Due to "HCI 1" being the default MIDI port, if you are using a port of a different name, this other port must be specified each time you run the script.
+To facilitate signal-to-MIDI transmission between Python and Ableton, you must install loopMIDI to create a MIDI port. By default, the resp-music scripts are set to run from a port named "HCI 1", but this can be easy adapted through the `--midi-port "PORT_NAME"` CLI argument within the Python terminal.[^*] Due to "HCI 1" being the default MIDI port, if you are using a port of a different name, this other port must be specified each time you run the script.
 
 To view the available MIDI ports on your machine, run the following Python code in a new file:
 
@@ -128,7 +128,7 @@ Examples of arguments include, but are not limited to:
 - `--cutoff`: low-pass filter frequency cutoff applied to respiration signal (applies to all four scripts)
 
 ## Troubleshooting
-- [*]When specifying your loopMIDI port, it is essential (if applicable) to include the port number after the port name within the CLI argument (e.g., `--midi-port "new_port 2"`)
+- [^*]When specifying your loopMIDI port, it is essential (if applicable) to include the port number after the port name within the CLI argument (e.g., `--midi-port "new_port 2"`)
 - If MIDI output is not being produced in Ableton, and steps earlier on in the pipeline have been set up ostensibly correctly, try removing and re-adding your MIDI port within the loopMIDI software
 
 *If any issues occur that are not referenced within this README, please open an [Issue](https://github.com/OliverACollins/Respiration-Controlled-Music/issues) so that any problems highlighted can be addressed*
