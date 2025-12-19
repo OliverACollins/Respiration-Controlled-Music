@@ -113,7 +113,7 @@ resp-music prerec-mod
 ```
 
 ### CLI
-In the Python terminal, to view all arguments and their defaults for each script, simply add `--help` to the end of each command above. For example...
+In the Python terminal, to view all arguments and their defaults for each script, simply add `--help` to the end of each command above.
 
 ``` python
 resp-music live-play --help
@@ -131,4 +131,4 @@ Examples of arguments include, but are not limited to:
 - *When specifying your loopMIDI port, it is essential (if applicable) to include the port number after the port name within the CLI argument (e.g., `--midi-port "new_port 2"`)
 - If MIDI output is not being produced in Ableton, and steps earlier on in the pipeline have been set up ostensibly correctly, try removing and re-adding your MIDI port within the loopMIDI software
 
-*If any issues occur that are not referenced within this README, please open an [Issue](https://github.com/OliverACollins/Respiration-Controlled-Music/issues) so that any problems highlighted can be addressed*
+*If any issues occur that are not referenced within this README, please open an [Issue](https://github.com/OliverACollins/Respiration-Controlled-Music/issues) so that any problems highlighted can be addressed. Thank you!*
